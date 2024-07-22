@@ -1,9 +1,11 @@
 from flask import Flask, jsonify, request
+from flask_limiter import Limiter
+from flask_limiter.util import get_remote_address
 import mysql.connector
 from mysql.connector import Error
 
 app = Flask(__name__)
-
+limiter = Limiter(get_remote_address, app=app, default_limits=["200 per day", "2 per hour"])
 def obtener_temperaturas(ciudad=None):
     """Conecta a la base de datos MySQL y consulta la tabla temperatura_media_diaria filtrando por ciudad si se proporciona."""
     try:
