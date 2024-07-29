@@ -5,6 +5,6 @@ RUN pip install confluent-kafka
 RUN pip install DateTime
 
 RUN mkdir /home/obtenerdatos
-COPY . /home/obtenerdatos
+COPY  pruebayahoo.py pruebayahoo.py
 
-CMD ["python", "/home/obtenerdatos/pruebayahoo.py"]
+CMD ["python", "pruebayahoo.py"]

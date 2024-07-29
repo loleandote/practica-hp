@@ -6,7 +6,7 @@ import json
 
 # Configuración inicial de Kafka
 config_kafka = {
-    'bootstrap.servers': 'localhost:9092'  # Ajusta esto según tu configuración de Kafka
+    'bootstrap.servers': 'almacenardatos-kafka-1:9092'  # Ajusta esto según tu configuración de Kafka
 }
 producer = Producer(**config_kafka)
 topic = 'cotizaciones_bolsa'
