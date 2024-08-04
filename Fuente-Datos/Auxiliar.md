@@ -1,0 +1,1 @@
+La iea aporta los datos en múltiples formátos, frecuencias y tipos de frecuencia dentro de los datos
